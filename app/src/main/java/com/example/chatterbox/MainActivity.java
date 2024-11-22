@@ -1,8 +1,10 @@
 package com.example.chatterbox;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
@@ -64,8 +66,21 @@ public class MainActivity extends AppCompatActivity {
             messageEditText.setText("");
             callAPI(question);
             welcomeTextView.setVisibility(View.GONE);
+
+
+            Button logoutButton = findViewById(R.id.logout_button);
+            logoutButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+                    startActivity(intent);
+                    finish(); // Finish MainActivity to prevent going back on logout
+                }
+            });
         });
     }
+
+
 
     void addToChat(String message,String sentBy){
         runOnUiThread(new Runnable() {

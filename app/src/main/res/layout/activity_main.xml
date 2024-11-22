@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -6,54 +5,84 @@
     android:layout_height="match_parent"
     tools:context="com.example.chatterbox.MainActivity">
 
-    <androidx.recyclerview.widget.RecyclerView
+    <!-- Header Section -->
+    <RelativeLayout
+        android:id="@+id/header_layout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/recycler_view"
-        android:layout_above="@id/bottom_layout"
-        />
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:background="@color/colorPrimary"
+        android:layout_alignParentTop="true">
+
+        <TextView
+            android:id="@+id/header_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Welcome to ChatterBox"
+            android:textSize="20sp"
+            android:textColor="@android:color/white"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="8dp" />
+
+        <Button
+            android:id="@+id/logout_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:backgroundTint="@color/colorAccent"
+            android:text="Logout"
+            android:textColor="@android:color/white"
+            android:layout_marginEnd="8dp" />
+    </RelativeLayout>
+
+    <!-- Welcome Text -->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/welcome_text"
-        android:layout_centerInParent="true"
+        android:layout_below="@id/header_layout"
         android:text="@string/chatterbox"
         android:gravity="center"
-        android:textSize="28dp"
-        />
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:padding="16dp" />
 
+    <!-- RecyclerView for Chat -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/welcome_text"
+        android:layout_above="@id/bottom_layout" />
+
+    <!-- Bottom Section for Input -->
     <RelativeLayout
+        android:id="@+id/bottom_layout"
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:layout_alignParentBottom="true"
-        android:padding="8dp"
-        android:id="@+id/bottom_layout">
+        android:padding="8dp">
+
         <EditText
+            android:id="@+id/message_edit_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/message_edit_text"
-            android:layout_centerInParent="true"
             android:hint="Drop Your Message Here"
             android:padding="16dp"
-            android:layout_toLeftOf="@id/send_button"
-            android:background="@drawable/rounded_corner"
-            />
+            android:layout_toStartOf="@id/send_button"
+            android:background="@drawable/rounded_corner" />
+
         <ImageButton
+            android:id="@+id/send_button"
             android:layout_width="48dp"
             android:layout_height="48dp"
-            android:id="@+id/send_button"
             android:layout_alignParentEnd="true"
-            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
             android:layout_marginStart="10dp"
-            android:padding="8dp"
             android:src="@drawable/ic_baseline_send_24"
-            android:background="?attr/selectableItemBackgroundBorderless"
-
-            />
-
-
+            android:background="?attr/selectableItemBackgroundBorderless" />
     </RelativeLayout>
-
-
 
 </RelativeLayout>
