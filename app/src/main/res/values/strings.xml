@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">ChatterBox</string>
     <string name="chatterbox">ChatterBox</string>
+    <string name="google_sign_in">Google Sign in</string>
+    <string name="default_web_client_id">174696186921-bncoffvr48cbfdv684jn9365ds4a0c21.apps.googleusercontent.com</string>
+    <string name="appAuthRedirectScheme">com.example.chatterbox</string>
+
+
 </resources>
