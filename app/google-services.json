@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "174696186921",
+    "project_id": "chatterbox-97e11",
+    "storage_bucket": "chatterbox-97e11.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:174696186921:android:fdbb1d7b7448aabd594838",
+        "android_client_info": {
+          "package_name": "com.example.chatterbox"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBaLQCUZrJhKXv8Yts0cPHMDJhIlbg5ukE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#FAFAFA">
+
+    <!-- Title Text -->
+    <TextView
+        android:id="@+id/login_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ChatterBox"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        tools:ignore="HardcodedText" />
+
+    <!-- Username Input -->
+    <EditText
+        android:id="@+id/username_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Username"
+        android:layout_below="@id/login_text"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/rounded_corner"
+        android:padding="12dp"
+        android:textSize="16sp"
+        tools:ignore="HardcodedText" />
+
+    <!-- Password Input -->
+    <EditText
+        android:id="@+id/password_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Password"
+        android:layout_below="@id/username_edit_text"
+        android:layout_marginTop="12dp"
+        android:inputType="textPassword"
+        android:background="@drawable/rounded_corner"
+        android:padding="12dp"
+        android:textSize="16sp"
+        tools:ignore="HardcodedText" />
+
+    <!-- Login Button -->
+    <Button
+        android:id="@+id/login_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/password_edit_text"
+        android:layout_marginTop="16dp"
+        android:text="Login"
+        android:background="@color/purple_500"
+        android:textColor="#FFF"
+        android:padding="12dp"
+        android:textSize="16sp"
+        android:layout_marginHorizontal="16dp"
+        tools:ignore="HardcodedText" />
+
+    <!-- Google Sign-In Button -->
+    <Button
+        android:id="@+id/button_google_signin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/login_button"
+        android:layout_marginTop="12dp"
+        android:text="@string/google_sign_in"
+        android:background="@color/colorPrimary"
+        android:textColor="#FFF"
+        android:padding="12dp"
+        android:textSize="16sp"
+        android:layout_marginHorizontal="16dp" />
+</RelativeLayout>
