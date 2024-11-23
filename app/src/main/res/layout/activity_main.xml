@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FAFAFA"
     tools:context="com.example.chatterbox.MainActivity">
 
     <!-- Header Section -->
@@ -10,20 +11,22 @@
         android:id="@+id/header_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="16dp"
-        android:background="@color/colorPrimary"
-        android:layout_alignParentTop="true">
+        android:paddingVertical="16dp"
+        android:paddingHorizontal="20dp"
+        android:background="#005f73"
+        android:layout_alignParentTop="true"
+        android:elevation="4dp">
 
         <TextView
             android:id="@+id/header_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Welcome to ChatterBox"
-            android:textSize="20sp"
-            android:textColor="@android:color/white"
+            android:text="ChatterBox"
+            android:textSize="22sp"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
             android:layout_centerVertical="true"
-            android:layout_alignParentStart="true"
-            android:layout_marginStart="8dp" />
+            android:layout_alignParentStart="true" />
 
         <Button
             android:id="@+id/logout_button"
@@ -31,59 +34,72 @@
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"
-            android:backgroundTint="@color/colorAccent"
+            android:backgroundTint="#e63946"
             android:text="Logout"
-            android:textColor="@android:color/white"
-            android:layout_marginEnd="8dp" />
-
+            android:textSize="14sp"
+            android:textColor="#FFFFFF"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="8dp"
+            android:elevation="2dp" />
     </RelativeLayout>
 
     <!-- Welcome Text -->
     <TextView
+        android:id="@+id/welcome_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/welcome_text"
         android:layout_below="@id/header_layout"
-        android:text="@string/chatterbox"
+        android:text="Welcome to ChatterBox"
         android:gravity="center"
-        android:textSize="24sp"
+        android:textSize="20sp"
         android:textStyle="bold"
-        android:padding="16dp" />
+        android:padding="16dp"
+        android:textColor="#3d405b" />
 
     <!-- RecyclerView for Chat -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_view"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="0dp"
         android:layout_below="@id/welcome_text"
-        android:layout_above="@id/bottom_layout" />
+        android:layout_above="@id/bottom_layout"
+        android:paddingHorizontal="16dp"
+        android:scrollbars="vertical" />
 
     <!-- Bottom Section for Input -->
     <RelativeLayout
         android:id="@+id/bottom_layout"
         android:layout_width="match_parent"
-        android:layout_height="80dp"
+        android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:padding="8dp">
+        android:padding="12dp"
+        android:background="#FFFFFF"
+        android:elevation="4dp">
 
         <EditText
             android:id="@+id/message_edit_text"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Drop Your Message Here"
-            android:padding="16dp"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
             android:layout_toStartOf="@id/send_button"
-            android:background="@drawable/rounded_corner" />
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:hint="Type your message..."
+            android:paddingHorizontal="16dp"
+            android:background="@drawable/rounded_corner"
+            android:textColor="#3d405b"
+            android:textSize="16sp"
+            android:layout_marginEnd="12dp" />
 
         <ImageButton
             android:id="@+id/send_button"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"
-            android:layout_marginStart="10dp"
             android:src="@drawable/ic_baseline_send_24"
-            android:background="?attr/selectableItemBackgroundBorderless" />
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Send"
+            app:tint="#005f73" />
     </RelativeLayout>
 
 </RelativeLayout>
