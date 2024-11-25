@@ -4,6 +4,11 @@
     <string name="google_sign_in">Google Sign in</string>
     <string name="default_web_client_id">174696186921-bncoffvr48cbfdv684jn9365ds4a0c21.apps.googleusercontent.com</string>
     <string name="appAuthRedirectScheme">com.example.chatterbox</string>
+    <string name="already_have_an_account_login">Already have an account? Login</string>
+    <string name="don_t_have_an_account_sign_up">Don\'t have an account? Sign Up</string>
+    <string name="password">Password</string>
+    <string name="register">Register</string>
+    <string name="login">Login</string>
 
 
 </resources>

@@ -15,7 +15,7 @@
         android:theme="@style/Theme.ChatterBox"
         tools:targetApi="31">
 
-
+        <!-- Login Activity -->
         <activity
             android:name=".LoginActivity"
             android:exported="true">
@@ -25,8 +25,14 @@
             </intent-filter>
         </activity>
 
+        <!-- Main Activity -->
         <activity
             android:name=".MainActivity"
+            android:exported="true" />
+
+        <!-- Register Activity -->
+        <activity
+            android:name=".RegisterActivity"
             android:exported="true" />
     </application>
 
