@@ -6,7 +6,7 @@
     android:background="#FAFAFA"
     tools:context="com.example.chatterbox.MainActivity">
 
-    <!-- Header Section -->
+
     <RelativeLayout
         android:id="@+id/header_layout"
         android:layout_width="match_parent"
@@ -43,7 +43,7 @@
             android:elevation="2dp" />
     </RelativeLayout>
 
-    <!-- Welcome Text -->
+
     <TextView
         android:id="@+id/welcome_text"
         android:layout_width="match_parent"
